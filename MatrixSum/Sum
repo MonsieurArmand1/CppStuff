@@ -1,0 +1,87 @@
+#include <iostream>
+using namespace std;
+/*Declaracion de variables globales*/
+//int a[5][5];
+//int b[5][5];
+//int c[5][5];
+int ren, col, ren2, col2, a1, a2, b1, b2, i, j, k;
+
+int
+main ()
+{
+/*Matriz A*/
+  cout << "Introduce el tamano de la matriz A separado por un espacio\n";
+  cin >> a1 >> a2;
+  int a[a1][a2];
+  cout << "Introduce los valores\n";
+  for (i = 0; i < a1; i++)
+    for (j = 0; j < a2; j++)
+      cin >> a[i][j];
+
+  cout << endl << "[ ";
+  for (i = 0; i < a1; i++)
+    {
+      cout << " " << endl;
+      for (j = 0; j < a2; j++)
+	cout << a[i][j];
+
+    }
+  cout << " ]" << endl;
+
+  /*Matriz B */
+  cout << "Introduce el tamano de la matriz B separado por un espacio\n";
+  cin >> b1 >> b2;
+  int b[b1][b2];
+  cout << "Introduce los valores\n";
+  for (i = 0; i < b1; i++)
+    for (j = 0; j < b2; j++)
+      cin >> b[i][j];
+
+  cout << endl << "[ ";
+  for (i = 0; i < b1; i++)
+    {
+      cout << " " << endl;
+      for (j = 0; j < b2; j++)
+	cout << b[i][j];
+
+    }
+  cout << " ]" << endl;
+
+  /*Calculo de tamano de la matriz */
+
+  ren = sizeof (a) / sizeof (a[0]);
+  col = sizeof (a[0]) / sizeof (int);
+  //cout << ren << " " << col << endl;
+
+  ren2 = sizeof (b) / sizeof (b[0]);
+  col2 = sizeof (b[0]) / sizeof (int);
+  //cout << ren2 << " " << col2 << endl;
+
+  /*Validacion de matrices y suma */
+  if (a1 == b1 && a2 == b2)
+    {
+    int c[a1][a2];
+      for (i = 0; i < a1; i++)
+        for (j = 0; j < a2; j++)
+            c[i][j] = a[i][j] + b[i][j];
+
+  /*Resultado*/
+
+      cout << endl << "[ ";
+      for (i = 0; i < a1; i++)
+	{
+	  cout << " " << endl;
+	  for (j = 0; j < a2; j++)
+	    cout << c[i][j];
+
+	}
+      cout << " ]" << endl;
+
+    }
+
+  else
+    cout <<
+      "El tamano de las matrices no es igual; por tanto, no es posible sumarlas\n";
+
+  return 0;
+}

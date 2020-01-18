@@ -1,0 +1,26 @@
+void admin();
+  void admin_de_productos();
+  void altas();
+  void bajas();
+  void mostrar();
+  void id();
+  void alfabeto();
+  void buscar_productos();
+  void modificaciones();
+  void utilidades();
+    void lectura();
+    void escritura();
+    void escritura_texto();
+    void lectura_usuarios_texto();
+  void admin_de_usuarios();
+  void altas_de_usuarios();
+  void bajas_de_usuarios();
+  void mostrar_usuarios();
+  void buscar_usuarios();
+  void modificar_usuarios();
+    void escritura_usuarios();
+    void lectura_usuarios();
+    void escritura_usuarios_texto();
+    void lectura_usuarios_texto();
+  void venta();
+
